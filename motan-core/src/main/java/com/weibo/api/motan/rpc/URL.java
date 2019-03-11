@@ -42,6 +42,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class URL {
 
+    // regProtocol
     private String protocol;
 
     private String host;

@@ -114,6 +114,8 @@ public class ServiceConfig<T> extends AbstractServiceConfig {
 
         checkInterfaceAndMethods(interfaceClass, methods);
 
+        // 解析RegistryConfig实体类，转换成URL对象
+        // URL对象分为注册URL和服务URL，注册URL是指到Registry服务的地址，服务URL则是具体使用的服务串
         List<URL> registryUrls = loadRegistryUrls();
         if (registryUrls == null || registryUrls.size() == 0) {
             throw new IllegalStateException("Should set registry config for service:" + interfaceClass.getName());
